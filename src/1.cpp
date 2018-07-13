@@ -5,20 +5,14 @@ using namespace std;
 
 int main() {
 
-	int x = 0;
 	int suma = 0;
 
-	while (x<1000) {
-
-		if ((x % 3 == 0) || (x % 5 == 0)) {
-			suma += x;
-		}
-		++x;
-	}
-
+	for (int i = 0; i < 1000; i++) 
+		if ((i % 3 == 0) || (i % 5 == 0))
+			suma += i;
+	
 	cout << suma << endl;
 
 	system("pause");
 	return 0;
-
 }
