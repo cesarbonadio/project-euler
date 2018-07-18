@@ -12,7 +12,7 @@ void count_d (int p){
      
         explicacion  de (p*(p-2*a) % (2*(p-a)) == 0) obviando b y c
         
-        si se sabe que se trata del perÌmetro de un tri·ngulo rect·ngulo 
+        si se sabe que se trata del per√≠metro de un tri√°ngulo rect√°ngulo 
         entonces se puede decir que:
                  
                  (a*a) + (b*b) = (c*c) (1)
@@ -30,19 +30,19 @@ void count_d (int p){
         Ahora  (p*(p-2*a) % (2*(p-a)) == 0) es porque:
 
          si  b = ((p*p)-2pa)/(2p-2a))  entonces (p*(p-2*a) % (2*(p-a)) == 0) verifica que exista
-         un valor de b y que dichas expresiones son proporcionales , siendo 1/b Û b la constante que 
+         un valor de b y que dichas expresiones son proporcionales , siendo 1/b √≥ b la constante que 
          multiplica. 
         
         
-        Adem·s, si se tiene en cuenta que:
+        Adem√°s, si se tiene en cuenta que:
                 
         si (a*a) + (b*b) es par, entonces c es par , por lo tanto p es par
-        si (a*a) + (b*b) es impar, entonces c impar, por lo tanto p es impar
+        si (a*a) + (b*b) es impar, entonces c impar, por lo tanto p es par
         (estas dos premisas por : a+b+c = p  ; par +par = par ; impar +impar = par)
         
         entonces solo se necesitan chequear los valores pares de p , por lo tanto incrementa en 2
         
-        Adem·s, solo se necesita chequear hasta (p/3) por que es el max valor que puede tomar 
+        Adem√°s, solo se necesita chequear hasta (p/3) por que es el max valor que puede tomar 
         para algun p
      
      */
