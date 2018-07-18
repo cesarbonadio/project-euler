@@ -26,7 +26,12 @@ void count_d (int p){
          
                 b = ((p*p)-2pa)/(2p-2a))          
         
-        por lo tanto , solo se necesita chequear esta ecuacion
+        Por lo tanto , solo se necesita chequear esta ecuacion.
+        Ahora  (p*(p-2*a) % (2*(p-a)) == 0) es porque:
+
+         si  b = ((p*p)-2pa)/(2p-2a))  entonces (p*(p-2*a) % (2*(p-a)) == 0) verifica que exista
+         un valor de b y que dichas expresiones son proporcionales , siendo 1/b ó b la constante que 
+         multiplica. 
         
         
         Además, si se tiene en cuenta que:
