@@ -1,40 +1,39 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <iostream>
-using namespace std;
+#include<math.h>
 
 #define LIMIT 500
 
 
 int count_factors(int n) {
 
-	int count = 0;
+	/*método óptimo para poder contar los divisores de un número
+	  hallar la raiz cuadrada de n y luego en el ciclo sumar 
+	  2 en vez de uno cada vez que se encuentre un divisor*/
 
-	for (int i = 1; i <= n; i++) { 
-		if (n%i == 0) ++count; 
-	 }
-
-	return count;
+	int a = 0, k = sqrt(n);
+	for (int i = 1; i < k; i++)
+		if (n%i == 0)
+			a += 2;
+	if (n == int(k) * int(k))
+		a--;
+	return a;
 }
 
 
 int main() {
 
-	int suma, j = 0;
+	int sum, j = 0;
 
 	while (true) {
-
-		suma = 0;
+		sum = 0;
 		++j;
-
-		suma = (j*(j + 1)) / 2;
-
-
-		if (count_factors(suma) > LIMIT) break;
+		sum = (j*(j + 1)) / 2;
+		if (count_factors(sum) > LIMIT) 
+		break;
 	}
 
-	printf("%i\n", suma);
-	printf("Tiene %i divisores \n", count_factors(suma));
+	printf("%i\n", sum);
 
 	system("pause");
 	return 0;

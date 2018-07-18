@@ -3,14 +3,13 @@
 #include <math.h>
 
 
-
 int ispalindrome(int x) {
 	unsigned int aux = x, digit, twirled = 0;
 
 
-	/*Todo numero palindromo de 6 digitos es divisible entre 11
-	  pero no todo numero divisible entre 11 es palindromo de 6 digitos.
-	  un palÃ­ndromo cualquiera puede ser escrito como: 
+	/*Todo numero palindromo es divisible entre 11
+	  pero no todo numero divisible entre 11 es palindromo.
+	  un palíndromo cualquiera puede ser escrito como: 
 
 	   abccba para cualquier valor de a,b y c
 	  

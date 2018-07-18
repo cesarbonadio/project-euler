@@ -1,13 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <iostream>
-using namespace std;
-
 
 int main() {
+
+	/*
+	 Se estableció una repetición para verificar que 
+	 i es divisible, en caso contrario se rompe con el ciclo
+	 para poder acortar el tiempo de respuesta. Aún así
+	 sigue siendo poco eficiente y tadra unos 7 segundos en
+	 dar respuesta. 
+	*/
+
+
 	int i = 1, k = 1, cont = 0;
 
-	while (i) {
+	while (true) {
 		++k;
 		cont = 0;
 
@@ -16,7 +23,10 @@ int main() {
 			else break;
 		}
 
-		if (cont == 20) { cout << k << endl; break; }
+		if (cont == 20) {
+			printf("%i\n",k);
+			break;
+		}
 	}
 
 	system("pause");

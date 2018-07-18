@@ -1,10 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <iostream>
-using namespace std;
 
+#define LIMIT 10001
 
 int isprime(int x) {
+
+	/*
+	 Optimización para saber si un número es primo.
+	 Basado en el algoritmo ASK (Agrawal–Kayal–Saxena primality test)
+	 pero con una cierta mejora para no comparar dos numeros en el mismo ciclo
+	*/
+
+
 	if (x <= 1) return 0;
 
 	else if (x <= 3) return 1;
@@ -23,15 +30,20 @@ int isprime(int x) {
 
 int main() {
 
+	/*
+	 Simplemente contar cada vez que se ecuentre un primo.
+	 Lo más pesado de este problema es optimizar la funcion
+	 isprime.
+	*/
+
 	long int i = 0; int cont = 0;
 
-	while (cont <= 10001) {
+	while (cont < LIMIT) {
 		i++;
 		if (isprime(i)) cont++;
 	}
 
-	cout << i << endl;
-
+	printf("%i\n", i);
 	system("pause");
 	return 0;
 }
