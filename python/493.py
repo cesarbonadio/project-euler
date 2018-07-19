@@ -10,7 +10,7 @@ def factorial(n):
  return result
 
 
-def combinatoria(n1,n2):
+def combination(n1,n2):
 	return factorial(n1)/(factorial(n1-n2)*factorial(n2))
 
 
@@ -30,4 +30,4 @@ def combinatoria(n1,n2):
 #  como 10c0 = 1
 #  entonces p(x=0) = (60c20)/(70c20)
 
-print(round(7*(1-(combinatoria(60,20)/combinatoria(70,20))),9))
+print(round(7*(1-(combination(60,20)/combination(70,20))),9))
