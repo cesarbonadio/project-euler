@@ -44,15 +44,15 @@ int main() {
 	long long   max = 0;
 
 	for (long long i = 1; i <= num; i++) {
-	            if (num%i == 0) {
-	                  if (isprime(i)){
-                                             max = i;
-		      num /= i;
-		}
-	            }
+	    if (num%i == 0) {
+	       if (isprime(i)){
+                max = i;
+		        num /= i;
+		    }
+	   }
 	}
 
-	printf("%i\n", max);
+	printf("%lli\n", max);
 	system("pause");
 	return 0;
 }

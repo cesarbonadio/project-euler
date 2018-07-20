@@ -25,7 +25,7 @@ int main() {
 		suma += numero;
 	}
 
-	printf("%i\n\n", suma);
+	printf("%lli\n\n", suma);
 
 	system("pause");
 	return 0;

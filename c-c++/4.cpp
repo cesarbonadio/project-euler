@@ -26,6 +26,7 @@ int ispalindrome(int x) {
 		aux = aux / 10;
 		twirled = (twirled * 10) + digit;
 	}
+	
 	if (twirled == x) return 1;
 	else return 0;
 }
@@ -46,7 +47,7 @@ int main() {
 		}
 	}
 
-	printf("%i\n", product);
+	printf("%lli\n", product);
 	system("pause");
 	return 0;
 }
