@@ -20,7 +20,7 @@ num = '73167176531330624919225119674426574742355349194934'\
 '71636269561882670428252483600823257530420752963450'
 
 # Recorrerse el string de 13 en 13 y ya.
-# Si en i el numero es 0, me salto 13 num
+# Si en i el numero es 0, me salto 13 numeros porque el
 # producto va a seguir dando 0
 
 maxx = 0
