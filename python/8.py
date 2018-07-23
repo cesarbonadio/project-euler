@@ -27,10 +27,7 @@ maxx = 0
 
 for i in range (0,len(num)-13,+1):
     product = 1
-
     for j in range (i,i+13,+1):
-
-
        if int(num[i]) == 0:
             i += 13
             break 
