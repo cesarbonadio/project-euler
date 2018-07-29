@@ -9,7 +9,6 @@ def factorial(n):
  	 result = result * i
  return result
 
-
 def sum_digits(n):
 	summ = 0
 	d = 0

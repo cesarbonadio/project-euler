@@ -24,6 +24,11 @@ int main() {
 
 	int sum = 0;
 
+	/*
+	se elige el 500000 arbitrariamente ya que no 
+	se define limite alguno en el enunciado
+	*/
+
 	for (int i = 0; i < 500000; i++)
 		if (is_valid(i))
 			sum += i;

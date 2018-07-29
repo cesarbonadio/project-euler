@@ -34,6 +34,11 @@ int is_curious(int n){
 
 int main() {
 
+	/*
+    muy parecido al problema 30
+    solo que este es con factoriales.
+	*/
+
 	int sum = 0;
 
 	for (int i = 0; i < 50000; i++)
