@@ -109,9 +109,4 @@ numbers = \
 # y luego imprimir los primeros 10 
 # convertido en string
 
-
-summ = 0
-for i in range (100):
- 	summ += numbers[i]
-	
-print(str(summ)[0:10])
+print(str(sum(numbers[i] for i in range(100)))[0:10])
