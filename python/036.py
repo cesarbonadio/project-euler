@@ -1,7 +1,3 @@
-def ispalindrome(n):
-	return str(n) == str(n)[::-1]
-
-
 # Esta solucion solo revisa a fuerza bruta los numeros impares
 # ningun número par puede ser palíndromo en binario.
 # si aplicamos divisiones sucesivas, todo numero par debe terminar
@@ -9,9 +5,4 @@ def ispalindrome(n):
 #
 # Ya ahí se descartan los pares
 
-summ = 0
-for i in range (1,1000000,+2):
-	if ispalindrome(i) and ispalindrome(bin(i)[2::]):
-		summ += i
-
-print(summ)	
+print(sum(i for i in range(1,10**6,+2) if str(i)==str(i)[::-1] and bin(i)[2:]==bin(i)[2:][::-1]))
