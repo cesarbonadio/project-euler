@@ -1,3 +1,4 @@
+import operator
 
 grid = [[8,2,22,97,38,15,0,40,0,75,4,5,7,78,52,12,50,77,91,8],
 [49,49,99,40,17,81,18,57,60,87,17,40,98,43,69,48,4,56,62,0],
@@ -20,31 +21,24 @@ grid = [[8,2,22,97,38,15,0,40,0,75,4,5,7,78,52,12,50,77,91,8],
 [20,73,35,29,78,31,90,1,74,31,49,71,48,86,81,16,23,57,5,54],
 [1,70,54,71,83,51,54,69,16,92,33,48,61,43,52,1,89,19,67,48]]
 
-#print(len(grid))
-#print(len(grid[0]),len(grid[1]))
-#problema 11
-max = 0
-max_dic_list = {'right':0,'left':0,'down':0,'up':0,'up_right':0,'up_left':0,'down_right':0,'down_left':0}
+#Convertir la cuadricula en una matriz
+#len(grid)-4 porque no se necesita chequear las tres ultimas filas y columnas
+#ya que los otros chequeos hacen ese trabajo (por el producto ser conmutativo)
 
-for i in range (0,len(grid)-1):
-    for j in range (0,len(grid)-1):
-        #for k in range (1,5):
+maxi = 0
+for i in range (0,len(grid)-4):
+    for j in range (0,len(grid)-4):
         try:
-            max_dic = {'right':grid[i][j]*grid[i+1][j+1]*grid[i+2][j+2]*grid[i+3][j+3],
-            'left':grid[i][j]*grid[i+1][j+1]*grid[i+2][j+2]*grid[i+3][j+3],
-            'down':grid[i][j]*grid[i+1][j+1]*grid[i+2][j+2]*grid[i+3][j+3],
-            'up':grid[i][j]*grid[i+1][j+1]*grid[i+2][j+2]*grid[i+3][j+3],
-            'up_right':grid[i][j]*grid[i+1][j+1]*grid[i+2][j+2]*grid[i+3][j+3],
-            'up_left':grid[i][j]*grid[i+1][j+1]*grid[i+2][j+2]*grid[i+3][j+3],
+            max_dic = {
+            'right':grid[i][j]*grid[i][j+1]*grid[i][j+2]*grid[i][j+3],
+            'down':grid[i][j]*grid[i+1][j]*grid[i+2][j]*grid[i+3][j],
             'down_right':grid[i][j]*grid[i+1][j+1]*grid[i+2][j+2]*grid[i+3][j+3],
-            'down_left':grid[i][j]*grid[i+1][j+1]*grid[i+2][j+2]*grid[i+3][j+3]
+            'down_left':grid[i][j]*grid[i+1][j-1]*grid[i+2][j-2]*grid[i+3][j-3]
             }
-            product = grid[i][j]*grid[i+1][j+1]*grid[i+2][j+2]*grid[i+3][j+3]
-            list = [grid[i][j],grid[i+1][j+1],grid[i+2][j+2],grid[i+3][j+3]]
-        except:
+        except IndexError:
             pass
-        if product>max:
-            max = product
-            max_list = list
+        max_key = str(max(max_dic.items(), key=operator.itemgetter(1))[0])
+        if max_dic[max_key]>maxi:
+            maxi = max_dic[max_key]
 
-print (max,max_list)
+print (maxi)
