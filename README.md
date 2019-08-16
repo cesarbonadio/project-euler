@@ -1,3 +1,3 @@
 # project-euler
 
-A couple of project euler solutions that I coded myself
+Algunas soluciones de project euler hechas en C y en python
